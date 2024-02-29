@@ -1,13 +1,155 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Finapp</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <title>Finapp</title>
+    <meta name="description" content="Finapp HTML Mobile Template">
+    <meta name="keywords"
+        content="bootstrap, wallet, banking, fintech mobile template, cordova, phonegap, mobile, html, responsive" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/192x192.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="manifest" href="../__manifest.json">
 </head>
 <body>
   <app-root></app-root>
+
+
+
+   <!-- ========= JS Files =========  -->
+    <!-- Bootstrap -->
+    <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Splide -->
+    <script src="assets/js/plugins/splide/splide.min.js"></script>
+    <!-- Base Js File -->
+    <script src="assets/js/base.js"></script>
+
+    <script>
+        // Add to Home with 2 seconds delay.
+        AddtoHome("2000", "once");
+    </script>
+    <script>
+
+      var chartExample1 = {
+          series: [{
+              data: [512, 405, 666, 1090, 1309, 1400, 1500, 700, 1600, 1400, 1600, 2000, 1100, 501, 3000, 1000, 2000]
+          }],
+          chart: {
+              type: 'area',
+              width: '100%',
+              height: 140,
+              sparkline: {
+                  enabled: true
+              }
+          },
+          stroke: {
+              width: 2,
+          },
+          colors: ['#1DCC70'],
+          tooltip: {
+              enabled: false
+          }
+      };
+
+      var chartExample2 = {
+          series: [{
+              data: [512, 405, 666, 1090, 1309, 1400, 1500, 700, 1700, 1600, 1400, 1600]
+          }],
+          chart: {
+              type: 'area',
+              width: '100%',
+              height: 140,
+              sparkline: {
+                  enabled: true
+              }
+          },
+          stroke: {
+              width: 2,
+          },
+          colors: ['#1DCC70'],
+          tooltip: {
+              enabled: false
+          }
+      };
+
+      var chartExample3 = {
+          series: [{
+              data: [512, 405, 666, 1090, 1309, 1400, 1500, 700, 405, 666, 1090, 1309, 1400, 1500]
+          }],
+          chart: {
+              type: 'area',
+              width: '100%',
+              height: 140,
+              sparkline: {
+                  enabled: true
+              }
+          },
+          stroke: {
+              width: 2,
+          },
+          colors: ['#1DCC70'],
+          tooltip: {
+              enabled: false
+          }
+      };
+
+      var chartExample4 = {
+          series: [{
+              data: [512, 405, 666, 1090, 1309, 1400, 1500, 700, 1000, 2000, 512, 405, 666, 1090, 1309, 1400, 1500]
+          }],
+          chart: {
+              type: 'area',
+              width: '100%',
+              height: 140,
+              sparkline: {
+                  enabled: true
+              }
+          },
+          stroke: {
+              width: 2,
+          },
+          colors: ['#1DCC70'],
+          tooltip: {
+              enabled: false
+          }
+      };
+
+      var chartExample5 = {
+          series: [{
+              data: [512, 405, 666, 1090, 1309, 1400, 1309, 1400, 1500]
+          }],
+          chart: {
+              type: 'area',
+              width: '100%',
+              height: 140,
+              sparkline: {
+                  enabled: true
+              }
+          },
+          stroke: {
+              width: 2,
+          },
+          colors: ['#1DCC70'],
+          tooltip: {
+              enabled: false
+          }
+      };
+
+      document.addEventListener('DOMContentLoaded', function () {
+          document.querySelectorAll('.chart-example-1').forEach(chart => new ApexCharts(chart, chartExample1).render());
+          document.querySelectorAll('.chart-example-2').forEach(chart => new ApexCharts(chart, chartExample2).render());
+          document.querySelectorAll('.chart-example-3').forEach(chart => new ApexCharts(chart, chartExample3).render());
+          document.querySelectorAll('.chart-example-4').forEach(chart => new ApexCharts(chart, chartExample4).render());
+          document.querySelectorAll('.chart-example-5').forEach(chart => new ApexCharts(chart, chartExample5).render());
+      })
+
+  </script>
 </body>
 </html>
